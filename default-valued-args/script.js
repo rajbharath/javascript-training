@@ -22,5 +22,20 @@ function showName(names){
 		}
 	}
 
-	alert(final_names.first_name + ' ' + final_names.last_name)
+	alert(final_names.first_name + ' ' + final_names.last_name);
 }
+
+
+function showNameUsesjQuery(event) {
+		var defaultParams = {
+			first_name : 'Dear',
+			last_name : 'Customer'
+		}
+		var final_names = $.extend({},defaultParams,event.data.names);
+		alert(final_names.first_name + ' ' + final_names.last_name);
+}
+
+$(document).ready(function () {
+	data =  {names: {last_name : "raj"} };
+	$("#jQueryButton").click(data,showNameUsesjQuery);
+ });

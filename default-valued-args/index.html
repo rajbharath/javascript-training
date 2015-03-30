@@ -1,11 +1,14 @@
+<!DOCTYPE html> 
 <html>
 	<head>
 		<title>Default Value for Args in JS </title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 		<input type="button" value="sayHello()" onclick="sayHello()" />
 		<input type="button" value="sayHello('Raj')" onclick="sayHello('raj')" />
 		<input type="button" value="multi-default-args" onclick="showName({ last_name : 'Raj'})">
+		<input type="button" id= "jQueryButton" value="multi-default-args-uses-jQuery" onclick="showNameUsesjQuery({ last_name : Raj})">
 	</body>
 </html>
