@@ -1,7 +1,8 @@
 function addAll() {
 	var sum = 0;
-	for (var i = 0; i < arguments.length; i++) {
-		sum = sum + arguments[i];
+	var arguments_converted_to_real_array = [].slice.call(arguments);
+	for (var i = 0; i < arguments_converted_to_real_array.length; i++) {
+		sum = sum + arguments_converted_to_real_array[i];
 	};
 	alert(sum);
 }
